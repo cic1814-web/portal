@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>My Works Portal</title>
+    <title>背徳のガーデン Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            /* 背景をご指定の「背景.jpg」に設定し、画面全体に固定して表示 */
-            background: url('背景.jpg') no-repeat center center fixed;
-            background-size: cover;
+            /* ご指定通り、元の黄色のグラデーション背景に戻しました */
+            background: linear-gradient(135deg, #fef08a 0%, #fefcbf 50%, #fef08a 100%);
             color: #ea580c; 
+            background-attachment: fixed;
         }
-        /* 透過を完全に無くし、文字を見やすくするために白で塗りつぶし */
+        /* カードのベース設定 */
         .solid-card {
             background-color: #ffffff;
         }
@@ -21,22 +21,19 @@
 </head>
 <body class="flex flex-col items-center justify-start min-h-screen p-6 font-sans">
 
-    <!-- コンテンツエリアの背景も透過を完全に無くし、はっきりとした白のボックスに変更 -->
+    <!-- 不透明な白のコンテンツボックス -->
     <div class="w-full max-w-md mt-8 flex flex-col items-center solid-card p-6 rounded-3xl shadow-2xl">
         
-        <!-- 1. プロフィール画像（丸型アイコン） -->
+        <!-- 1. プロフィール画像（丸型アイコンを金髪美人.jpgに変更） -->
         <div class="w-28 h-28 rounded-full border-4 border-orange-100 shadow-md overflow-hidden mb-4 bg-white">
-            <img src="学生服.jpg" alt="Profile" class="w-full h-full object-cover">
+            <img src="金髪美人.jpg" alt="Profile" class="w-full h-full object-cover">
         </div>
 
-        <!-- 2. プロフィールテキスト -->
+        <!-- 2. プロフィールテキスト（名前を背徳のガーデンに変更） -->
         <div class="text-center mb-8">
             <h1 class="text-2xl font-black tracking-wide text-orange-600 mb-2">
-                BIGchan
+                背徳のガーデン
             </h1>
-            <!-- 「AIでムフフなイラストを生成してます」を削除 -->
-            
-            <!-- 「（Xを除く）」を削除 -->
             <p class="text-[11px] text-amber-950 font-bold leading-relaxed px-6">
                 掲載イラストは全てAIで生成しております<br>
                 下記リンク先はR-18要素を含みますので、18歳未満の方は閲覧禁止です
@@ -46,17 +43,21 @@
         <!-- 3. リンク一覧部分 -->
         <div class="w-full space-y-4">
           
-          <!-- FANZA同人のリンクカード：透過を排除した純白のカードに変更 -->
+          <!-- FANZA同人のリンクカード：背景に「学生服.jpg」を表示させる画像カード仕様 -->
           <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
-            class="solid-card block w-full p-5 rounded-2xl shadow-md hover:scale-[1.01] transition-all duration-300 border border-orange-100">
+            class="block w-full h-52 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.01] transition-all duration-300 relative group bg-amber-100 border border-orange-100">
             
-            <div class="font-extrabold text-lg text-orange-600 mb-1">
-                FANZA同人
+            <!-- カードの背景画像に「学生服.jpg」を設定 -->
+            <img src="学生服.jpg" alt="FANZA同人" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            
+            <!-- 上部の白背景のラベルタグ（非透過） -->
+            <div class="absolute top-3 left-3 bg-white px-4 py-1 rounded-lg shadow-sm">
+                <span class="font-bold text-sm text-orange-600">FANZA同人</span>
             </div>
             
-            <!-- 「生成イラスト一覧はこちらへ」を削除し、指定の表記のみに修正 -->
-            <div class="text-xs text-amber-900 font-bold tracking-wide">
-                【稼働中】（R-18要素アリ）
+            <!-- 下部の白背景の説明帯（非透過） -->
+            <div class="absolute bottom-3 left-3 bg-white px-3 py-1 rounded-md shadow-sm max-w-[90%]">
+                <span class="text-[10px] font-bold text-amber-800 block truncate">【稼働中】（R-18要素アリ）</span>
             </div>
           </a>
 
