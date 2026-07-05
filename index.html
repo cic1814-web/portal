@@ -8,13 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+            /* 背景を紫・紺・マゼンタが混ざる鮮やかなグラデーションに変更 */
+            background: radial-gradient(circle at top, #2e1065 0%, #0f172a 100%);
             color: #f8fafc;
         }
         .glass-card {
             background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
@@ -22,7 +22,8 @@
 
     <div class="w-full max-w-md mt-10">
         <div class="text-center mb-10">
-            <h1 class="text-3xl font-extrabold tracking-tighter text-blue-400 mb-2">
+            <!-- タイトルをピンク〜オレンジのグラデーション文字に変更 -->
+            <h1 class="text-3xl font-extrabold tracking-tighter mb-2 bg-gradient-to-r from-pink-400 via-rose-400 to-orange-400 bg-clip-text text-transparent">
                 My Works Portal
             </h1>
             <p class="text-sm text-gray-400 leading-relaxed px-4">
@@ -32,11 +33,14 @@
 
         <div class="space-y-6">
           
-          <!-- 指定されたDMMのリンク1つに統合 -->
+          <!-- カードの外枠に鮮やかなグラデーション（ピンク〜パープル〜シアン）を適用 -->
           <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
-            class="glass-card block w-full p-5 rounded-2xl hover:scale-[1.02] hover:border-blue-500/50 transition-all duration-300 shadow-xl">
-            <div class="font-bold text-lg mb-1 text-sky-400">DMM TV / 同人</div>
-            <div class="text-xs text-gray-400 leading-tight">
+            class="glass-card block w-full p-5 rounded-2xl hover:scale-[1.02] transition-all duration-300 shadow-2xl border-2 border-transparent bg-clip-border relative before:absolute before:inset-0 before:rounded-2xl before:border-2 before:border-transparent before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-cyan-500 before:[mask-composite:exclude] before:[text-shadow:0_0_20px_rgba(244,63,94,0.5)]">
+            
+            <div class="font-bold text-xl mb-1 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent relative z-10">
+                FANZA同人
+            </div>
+            <div class="text-xs text-gray-300 leading-tight relative z-10">
                 作品を販売・公開しています。こちらから詳細をご確認いただけます。
             </div>
           </a>
