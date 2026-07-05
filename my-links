@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>My Works Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+            color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-start min-h-screen p-6 font-sans">
+
+    <div class="w-full max-w-md mt-10">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-extrabold tracking-tighter text-blue-400 mb-2">
+                My Works Portal
+            </h1>
+            <p class="text-sm text-gray-400 leading-relaxed px-4">
+                創作活動のリンクです。詳細は下記をご確認ください。
+            </p>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- 指定されたDMMのリンク1つに統合 -->
+          <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
+            class="glass-card block w-full p-5 rounded-2xl hover:scale-[1.02] hover:border-blue-500/50 transition-all duration-300 shadow-xl">
+            <div class="font-bold text-lg mb-1 text-sky-400">DMM TV / 同人</div>
+            <div class="text-xs text-gray-400 leading-tight">
+                作品を販売・公開しています。こちらから詳細をご確認いただけます。
+            </div>
+          </a>
+
+        </div>
+
+        <p class="text-center text-[10px] text-gray-600 mt-16">
+          © 2026 / Private Portal / No Index Requested
+        </p>
+    </div>
+
+</body>
+</html>
