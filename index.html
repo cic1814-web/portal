@@ -13,51 +13,50 @@
             background-size: cover;
             color: #ea580c; 
         }
-        /* リンクカードの背景を、文字が見やすくなるよう白の半透明（すりガラス風）に設定 */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(4px);
+        /* 透過を完全に無くし、文字を見やすくするために白で塗りつぶし */
+        .solid-card {
+            background-color: #ffffff;
         }
     </style>
 </head>
 <body class="flex flex-col items-center justify-start min-h-screen p-6 font-sans">
 
-    <!-- 全体の視認性を保つため、コンテンツの背後にうっすら白いフィルターを敷いています -->
-    <div class="w-full max-w-md mt-8 flex flex-col items-center bg-white/40 backdrop-blur-sm p-6 rounded-3xl shadow-xl">
+    <!-- コンテンツエリアの背景も透過を完全に無くし、はっきりとした白のボックスに変更 -->
+    <div class="w-full max-w-md mt-8 flex flex-col items-center solid-card p-6 rounded-3xl shadow-2xl">
         
         <!-- 1. プロフィール画像（丸型アイコン） -->
-        <div class="w-28 h-28 rounded-full border-4 border-white shadow-md overflow-hidden mb-4 bg-white">
+        <div class="w-28 h-28 rounded-full border-4 border-orange-100 shadow-md overflow-hidden mb-4 bg-white">
             <img src="学生服.jpg" alt="Profile" class="w-full h-full object-cover">
         </div>
 
         <!-- 2. プロフィールテキスト -->
         <div class="text-center mb-8">
-            <h1 class="text-2xl font-black tracking-wide text-orange-600 mb-1">
+            <h1 class="text-2xl font-black tracking-wide text-orange-600 mb-2">
                 BIGchan
             </h1>
-            <p class="text-sm font-bold text-orange-500 mb-2">
-                AIでムフフなイラストを生成してます
-            </p>
+            <!-- 「AIでムフフなイラストを生成してます」を削除 -->
+            
+            <!-- 「（Xを除く）」を削除 -->
             <p class="text-[11px] text-amber-950 font-bold leading-relaxed px-6">
                 掲載イラストは全てAIで生成しております<br>
-                下記リンク先はR-18要素を含みますので、18歳未満の方は閲覧禁止です（Xを除く）
+                下記リンク先はR-18要素を含みますので、18歳未満の方は閲覧禁止です
             </p>
         </div>
 
         <!-- 3. リンク一覧部分 -->
         <div class="w-full space-y-4">
           
-          <!-- FANZA同人のリンクカード：背景を白（半透明）にして文字をはっきりと変更 -->
+          <!-- FANZA同人のリンクカード：透過を排除した純白のカードに変更 -->
           <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
-            class="glass-card block w-full p-5 rounded-2xl shadow-md hover:scale-[1.01] transition-all duration-300 border border-white/60">
+            class="solid-card block w-full p-5 rounded-2xl shadow-md hover:scale-[1.01] transition-all duration-300 border border-orange-100">
             
             <div class="font-extrabold text-lg text-orange-600 mb-1">
                 FANZA同人
             </div>
             
-            <!-- 「無料」の文字を削除し、文言をすっきりと修正 -->
-            <div class="text-xs text-amber-900 font-bold leading-tight">
-                【稼働中】生成イラスト一覧はこちらへ（R-18要素アリ）
+            <!-- 「生成イラスト一覧はこちらへ」を削除し、指定の表記のみに修正 -->
+            <div class="text-xs text-amber-900 font-bold tracking-wide">
+                【稼働中】（R-18要素アリ）
             </div>
           </a>
 
