@@ -8,7 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background: linear-gradient(135deg, #fef08a 0%, #fefcbf 50%, #fef08a 100%);
+            /* まぶしさを抑えた、柔らかく薄い黄色のグラデーション背景 */
+            background: linear-gradient(135deg, #fef9c3 0%, #fffdf5 50%, #fef9c3 100%);
             color: #ea580c; 
             background-attachment: fixed;
         }
@@ -44,12 +45,12 @@
           <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
             class="block w-full h-52 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.01] transition-all duration-300 relative group bg-amber-100 border border-orange-100">
             
-            <!-- カード背景の指定ファイルを「学生服.jpg2.jpg」に書き換え -->
+            <!-- カード背景 -->
             <img src="学生服.jpg2.jpg" alt="FANZA同人" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             
-            <!-- 上部の白背景のラベルタグ -->
+            <!-- 上部のラベルタグ：文字サイズを text-sm から text-base（ひと回り大きく）に変更 -->
             <div class="absolute top-3 left-3 bg-white px-4 py-1 rounded-lg shadow-sm">
-                <span class="font-bold text-sm text-orange-600">FANZA同人</span>
+                <span class="font-extrabold text-base text-orange-600">FANZA同人</span>
             </div>
             
             <!-- 下部の白背景の説明帯 -->
