@@ -8,46 +8,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            /* 背景を紫・紺・マゼンタが混ざる鮮やかなグラデーションに変更 */
-            background: radial-gradient(circle at top, #2e1065 0%, #0f172a 100%);
+            /* 深みと鮮やかさを両立した多重グラデーション背景 */
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.6) 0%, transparent 50%),
+                radial-gradient(circle at 80% 40%, rgba(190, 24, 74, 0.5) 0%, transparent 60%),
+                radial-gradient(circle at 50% 80%, rgba(15, 23, 42, 1) 0%, #090d16 100%);
+            background-attachment: fixed;
             color: #f8fafc;
         }
+        /* カード背景の視認性を上げるため、少し暗めの半透明に調整 */
         .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
         }
     </style>
 </head>
 <body class="flex flex-col items-center justify-start min-h-screen p-6 font-sans">
 
-    <div class="w-full max-w-md mt-10">
+    <div class="w-full max-w-md mt-12 relative z-10">
+        
+        <!-- ヘッダー部分 -->
         <div class="text-center mb-10">
-            <!-- タイトルをピンク〜オレンジのグラデーション文字に変更 -->
-            <h1 class="text-3xl font-extrabold tracking-tighter mb-2 bg-gradient-to-r from-pink-400 via-rose-400 to-orange-400 bg-clip-text text-transparent">
+            <h1 class="text-4xl font-black tracking-tighter mb-3 bg-gradient-to-r from-pink-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">
                 My Works Portal
             </h1>
-            <p class="text-sm text-gray-400 leading-relaxed px-4">
+            <p class="text-xs text-slate-400 leading-relaxed px-4 tracking-wide">
                 創作活動のリンクです。詳細は下記をご確認ください。
             </p>
         </div>
 
+        <!-- リンクカード部分 -->
         <div class="space-y-6">
           
-          <!-- カードの外枠に鮮やかなグラデーション（ピンク〜パープル〜シアン）を適用 -->
           <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
-            class="glass-card block w-full p-5 rounded-2xl hover:scale-[1.02] transition-all duration-300 shadow-2xl border-2 border-transparent bg-clip-border relative before:absolute before:inset-0 before:rounded-2xl before:border-2 before:border-transparent before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-cyan-500 before:[mask-composite:exclude] before:[text-shadow:0_0_20px_rgba(244,63,94,0.5)]">
+            class="glass-card block w-full p-6 rounded-2xl hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(219,39,119,0.25)] border border-transparent relative before:absolute before:inset-0 before:rounded-2xl before:p-[2px] before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-cyan-400 before:-z-10 before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[mask-composite:xor] before:[webkit-mask-composite:xor]">
             
-            <div class="font-bold text-xl mb-1 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent relative z-10">
+            <!-- 文字色をはっきりとした「白」に変更し、視認性を最優先 -->
+            <div class="font-extrabold text-2xl mb-2 text-white tracking-wide">
                 FANZA同人
             </div>
-            <div class="text-xs text-gray-300 leading-tight relative z-10">
+            
+            <div class="text-xs text-slate-300 leading-relaxed font-medium">
                 作品を販売・公開しています。こちらから詳細をご確認いただけます。
             </div>
           </a>
 
         </div>
 
-        <p class="text-center text-[10px] text-gray-600 mt-16">
+        <!-- フッター -->
+        <p class="text-center text-[10px] text-slate-600 mt-20 tracking-widest">
           © 2026 / Private Portal / No Index Requested
         </p>
     </div>
