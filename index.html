@@ -8,55 +8,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            /* 深みと鮮やかさを両立した多重グラデーション背景 */
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.6) 0%, transparent 50%),
-                radial-gradient(circle at 80% 40%, rgba(190, 24, 74, 0.5) 0%, transparent 60%),
-                radial-gradient(circle at 50% 80%, rgba(15, 23, 42, 1) 0%, #090d16 100%);
+            /* Lit.Linkに近い、温かみのある明るいクリーム色のグラデーション背景 */
+            background: linear-gradient(135deg, #fef08a 0%, #fefcbf 50%, #fef08a 100%);
+            color: #ea580c; 
             background-attachment: fixed;
-            color: #f8fafc;
-        }
-        /* カード背景の視認性を上げるため、少し暗めの半透明に調整 */
-        .glass-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(12px);
         }
     </style>
 </head>
 <body class="flex flex-col items-center justify-start min-h-screen p-6 font-sans">
 
-    <div class="w-full max-w-md mt-12 relative z-10">
+    <div class="w-full max-w-md mt-8 flex flex-col items-center">
         
-        <!-- ヘッダー部分 -->
-        <div class="text-center mb-10">
-            <h1 class="text-4xl font-black tracking-tighter mb-3 bg-gradient-to-r from-pink-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">
-                My Works Portal
+        <!-- 1. プロフィール画像（丸型アイコン） -->
+        <div class="w-28 h-28 rounded-full border-4 border-white shadow-md overflow-hidden mb-4 bg-white">
+            <!-- 指定されたアイコン画像ファイルを設定 -->
+            <img src="学生服.jpg" alt="Profile" class="w-full h-full object-cover">
+        </div>
+
+        <!-- 2. プロフィールテキスト -->
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-black tracking-wide text-orange-600 mb-1">
+                BIGchan
             </h1>
-            <p class="text-xs text-slate-400 leading-relaxed px-4 tracking-wide">
-                創作活動のリンクです。詳細は下記をご確認ください。
+            <p class="text-sm font-bold text-orange-500 mb-2">
+                AIでムフフなイラストを生成してます
+            </p>
+            <p class="text-[11px] text-amber-700 font-medium leading-relaxed px-6">
+                掲載イラストは全てAIで生成しております<br>
+                下記リンク先はR-18要素を含みますので、18歳未満の方は閲覧禁止です（Xを除く）
             </p>
         </div>
 
-        <!-- リンクカード部分 -->
-        <div class="space-y-6">
+        <!-- 3. リンク一覧部分 -->
+        <div class="w-full space-y-4">
           
+          <!-- ▼ 大きな画像付きリンクカード（FANZA同人） ▼ -->
           <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/article=maker/exclude_ai=0/id=232886/" target="_blank"
-            class="glass-card block w-full p-6 rounded-2xl hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(219,39,119,0.25)] border border-transparent relative before:absolute before:inset-0 before:rounded-2xl before:p-[2px] before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-cyan-400 before:-z-10 before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[mask-composite:xor] before:[webkit-mask-composite:xor]">
+            class="block w-full h-52 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.01] transition-all duration-300 relative group bg-amber-100">
             
-            <!-- 文字色をはっきりとした「白」に変更し、視認性を最優先 -->
-            <div class="font-extrabold text-2xl mb-2 text-white tracking-wide">
-                FANZA同人
+            <!-- 指定されたカード背景画像ファイルを設定 -->
+            <img src="背景.jpg" alt="FANZA同人" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            
+            <!-- 上部の白背景のラベルタグ -->
+            <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-4 py-1 rounded-lg shadow-sm">
+                <span class="font-bold text-sm text-orange-600">FANZA同人</span>
             </div>
             
-            <div class="text-xs text-slate-300 leading-relaxed font-medium">
-                作品を販売・公開しています。こちらから詳細をご確認いただけます。
+            <!-- 下部の白背景の説明帯 -->
+            <div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-md shadow-sm max-w-[90%]">
+                <span class="text-[10px] font-bold text-amber-800 block truncate">【稼働中】生成イラスト一覧はこちらへ（無料/R-18要素アリ）</span>
             </div>
           </a>
+          <!-- ▲ ここまで画像カード ▲ -->
 
         </div>
 
         <!-- フッター -->
-        <p class="text-center text-[10px] text-slate-600 mt-20 tracking-widest">
+        <p class="text-center text-[10px] text-amber-700/60 mt-16 tracking-wider">
           © 2026 / Private Portal / No Index Requested
         </p>
     </div>
